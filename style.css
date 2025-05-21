@@ -1,168 +1,203 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Fredoka:wght@400;700&display=swap');
 
-/* Reset básico e fonte clean */
+/* Reset e base */
 body, html {
     height: 100%;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-body {
-    margin: 0;
-    padding: 0;
+    /* Gradiente azul-vermelho */
+    background: linear-gradient(135deg, #1976d2 0%, #e53935 100%);
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
-    min-height: 100vh;
     color: #222;
-    transition: background 0.4s;
+    min-height: 100vh;
     width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .portfolio-container {
-    max-width: 650px;
-    margin: 64px auto;
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 6px 36px rgba(0,0,0,0.10);
-    padding: 56px 44px 44px 44px;
+    max-width: 600px;
+    margin: 48px auto;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 12px 48px 0 rgba(80, 60, 120, 0.18), 0 1.5px 8px 0 rgba(80, 60, 120, 0.08);
+    padding: 56px 36px 44px 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 32px;
     animation: fadeIn 1.2s;
     transition: box-shadow 0.3s, background 0.3s, transform 0.3s;
-    backdrop-filter: blur(8px) saturate(1.2);
-    border-radius: 22px;
-    min-height: unset;
-    height: auto;
-    max-height: 96vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow-y: auto;
-}
-
-.portfolio-container:hover, .portfolio-container:focus-within {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 24px 64px 0 rgba(60,60,90,0.22);
-    outline: none;
+    backdrop-filter: blur(10px) saturate(1.2);
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 24px;
-    border: 4px solid #e0e7ef;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    transition: transform 0.3s;
+    margin-bottom: 22px;
+    border: 5px solid #fc5c7d;
+    box-shadow: 0 4px 24px #fc5c7d33, 0 2px 12px #6a82fb22;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
 }
 .profile-img:hover {
-    transform: scale(1.06) rotate(-2deg);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 32px #fc5c7d55, 0 4px 24px #6a82fb33;
 }
 
 .profile h1 {
-    font-size: 2.6rem;
-    margin: 0 0 14px 0;
+    font-size: 2.4rem;
+    margin: 0 0 12px 0;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     font-family: 'Fredoka', 'Montserrat', Arial, sans-serif;
+    /* Gradiente azul-vermelho */
+    background: linear-gradient(90deg, #1976d2 20%, #e53935 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0 2px 8px #e5393522;
 }
 
 .description {
-    font-size: 1.28rem;
+    font-size: 1.22rem;
     color: #444;
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
     line-height: 1.7;
-    font-family: 'Fredoka', 'Montserrat', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     letter-spacing: 0.5px;
-}
-
-.links {
-    display: flex;
-    gap: 48px;
-    justify-content: center;
-    margin-top: 32px;
-    flex-wrap: wrap;
 }
 
 .links-info {
     margin-bottom: 18px;
     font-size: 1.08rem;
-    color: #555;
+    color: #6a82fb;
     text-align: center;
     width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.links {
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
 }
 
 .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
-    background: #f3f6fa;
-    color: #222;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background: linear-gradient(135deg, #f3f6fa 60%, #e0e7ef 100%);
+    color: #6a82fb;
+    transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.18s, filter 0.18s;
+    box-shadow: 0 2px 12px #fc5c7d22;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
     border: none;
     outline: none;
     cursor: pointer;
     position: relative;
+    filter: brightness(1);
 }
-.icon:active {
-    transform: scale(0.93);
+.icon svg {
+    width: 60%;
+    height: 60%;
+    display: block;
+    overflow: visible;
 }
-.icon.github:hover {
-    background: #222;
+.icon:hover, .icon:focus {
+    background: linear-gradient(135deg, #fc5c7d 40%, #6a82fb 100%);
     color: #fff;
-    box-shadow: 0 4px 16px #2222;
+    transform: translateY(-6px) scale(1.12) rotate(-3deg);
+    box-shadow: 0 8px 32px #fc5c7d44, 0 2px 12px #6a82fb33;
+    filter: brightness(1.15) drop-shadow(0 0 8px #fc5c7d88);
 }
-.icon.linkedin:hover {
+
+.icon.github {
+    background: #fff;
+    color: #24292f;
+}
+.icon.linkedin {
+    background: #fff;
+    color: #0077b5;
+}
+.icon.instagram {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+}
+.icon.email {
+    background: #fff;
+    color: #ea4335;
+}
+.icon.whatsapp {
+    background: #fff;
+    color: #25d366;
+}
+
+/* Hover mantém a cor da marca e destaca com brilho */
+.icon.github:hover, .icon.github:focus {
+    background: #24292f;
+    color: #fff;
+    box-shadow: 0 4px 16px #24292f44;
+}
+.icon.linkedin:hover, .icon.linkedin:focus {
     background: #0077b5;
     color: #fff;
     box-shadow: 0 4px 16px #0077b544;
 }
-.icon.instagram:hover {
-    background: #e1306c;
+.icon.instagram:hover, .icon.instagram:focus {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     color: #fff;
-    box-shadow: 0 4px 16px #e1306c44;
+    box-shadow: 0 4px 16px #d6249f44;
 }
+.icon.email:hover, .icon.email:focus {
+    background: #ea4335;
+    color: #fff;
+    box-shadow: 0 4px 16px #ea433544;
+}
+.icon.whatsapp:hover, .icon.whatsapp:focus {
+    background: #25d366;
+    color: #fff;
+    box-shadow: 0 4px 16px #25d36644;
+}
+
 .icon::after {
     content: attr(aria-label);
     position: absolute;
     bottom: -32px;
     left: 50%;
     transform: translateX(-50%);
-    background: #222;
+    background: #fc5c7d;
     color: #fff;
-    font-size: 0.85rem;
-    padding: 3px 12px;
-    border-radius: 12px;
+    font-size: 0.93rem;
+    padding: 4px 16px;
+    border-radius: 14px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s, bottom 0.2s;
     white-space: nowrap;
+    z-index: 10;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px #fc5c7d44;
 }
-.icon:hover::after {
+.icon:hover::after, .icon:focus::after {
     opacity: 1;
     bottom: -44px;
 }
@@ -174,11 +209,13 @@ body {
     font-size: 1.08rem;
     color: #444;
 }
+
 .email-label {
     font-weight: 600;
     margin-right: 6px;
     color: #222;
 }
+
 .email-link {
     color: #e1306c;
     text-decoration: none;
@@ -186,6 +223,7 @@ body {
     transition: color 0.2s;
     word-break: break-all;
 }
+
 .email-link:hover {
     color: #0077b5;
     text-decoration: underline;
@@ -194,23 +232,19 @@ body {
 @media (max-width: 700px) {
     .portfolio-container {
         max-width: 98vw;
-        padding: 8vw 2vw 8vw 2vw;
-        min-height: unset;
-        height: auto;
-        max-height: 98vh;
-        overflow-y: auto;
+        padding: 7vw 2vw 7vw 2vw;
     }
-    .profile-img {
-        width: 90px;
-        height: 90px;
-    }
-    .links {
-        gap: 16px;
-    }
-    .profile h1 {
-        font-size: 1.5rem;
-    }
-    .description {
-        font-size: 1rem;
-    }
+    .profile-img { width: 100px; height: 100px; }
+    .icon { width: 48px; height: 48px; font-size: 1.3rem; }
+    .profile h1 { font-size: 1.3rem; }
+    .description, .links-info { font-size: 1rem; }
+    .links { gap: 18px; }
+}
+
+@media (max-width: 400px) {
+    .portfolio-container { padding: 4vw 1vw 4vw 1vw; }
+    .profile-img { width: 68px; height: 68px; }
+    .icon { width: 36px; height: 36px; font-size: 1rem; }
+    .profile h1 { font-size: 1.05rem; }
+    .description, .links-info { font-size: 0.88rem; }
 }
